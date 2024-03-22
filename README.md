@@ -10,7 +10,7 @@ Multi-label classification (MLC) faces challenges from label noise in training d
 
 
 ## Training Code
-We provide [Training code](train.py), that demonstrate how to train our model. Example of training with MS-COCO (We train the model on 2 ):
+We provide [Training code](train.py), that demonstrate how to train our model. Example of training with MS-COCO (We train the model on 2 RTX 3090):
 ```
 CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --use_env train.py <dataset_path> --dataset=COCO2014 --model-name=resnet101 --pretrainedModel=<pretrained_model_path> --workers=8 --scaleSize=512 --cropSize=448 --topK=1 --b=35 --num-classes=80 --lr=1e-4 --ema=0.9997 --Stop_epoch=40 --alpha=1.0 --prob=0.1 --gamma=0.55
 ```
