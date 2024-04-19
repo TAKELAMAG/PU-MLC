@@ -18,7 +18,6 @@ def convert_to_lgconv(model, ignore_key=None):
                 LocalGlobalConv(m)
             )
         convert_to_lgconv(m, ignore_key=None)
-    #print(model)
 
 
 class LocalGlobalConv(nn.Module):
@@ -82,23 +81,4 @@ class GlobalBranch(nn.Module):
     
 
 if __name__ == '__main__':
-    gb = GlobalBranch(64, 64, 8)
-    x = torch.randn(2, 64, 14, 14)
-    out = gb(x)
-    print(out.shape)
-    conv = nn.Conv2d(64, 64, 3, stride=1, padding=1, groups=64)
-    lg = LocalGlobalConv(conv)
-    out = lg(x)
-    print(out.shape)
-
-    model = nn.Sequential(
-        nn.Conv2d(10, 32, 1),
-        nn.Sequential(
-            nn.Conv2d(32, 32, 3, padding=1, stride=2),
-        ),
-        nn.Conv2d(32, 10, 1)
-    )
-    convert_to_lgconv(model)
-    x = torch.randn(2, 10, 8, 8)
-    out = model(x)
-    print(out.shape)
+    
