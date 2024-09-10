@@ -10,6 +10,9 @@ Multi-label classification (MLC) faces challenges from label noise in training d
 
 ![framework](figures/framework3.png)
 
+## News
+Our paper is accepted by ICME 2024!
+
 ## Training Code
 We provide [Training code](train.py), that demonstrate how to train our model. Example of training with MS-COCO (We train the model on 2 RTX 3090):
 ```
