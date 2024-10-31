@@ -26,13 +26,14 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 -
 
 ## Citation
 ```
- @misc{PU-MLC2023, 
-        title={Positive Label Is All You Need for Multi-Label Classification}, 
-        author={Zhixiang Yuan and Kaixin Zhang and Tao Huang}, 
-        year={2023}, 
-        eprint={2306.16016},
-        archivePrefix={arXiv}, 
-        primaryClass={cs.CV}}
+@inproceedings{yuan2024positive,
+  title={Positive label is all you need for multi-label classification},
+  author={Yuan, Zhixiang and Zhang, Kaixin and Huang, Tao},
+  booktitle={2024 IEEE International Conference on Multimedia and Expo (ICME)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
+}
 ```
 
 ## Acknowledgements
